@@ -121,13 +121,13 @@ In addition to labels, you can also assign metadata attributes that expose infor
 ```scala
 // append custom package attributes
 bintrayPackageAttributes ~=
-  ((_: bintray.AttrMap) ++ Map("my-package-attr" -> Seq(bintry.StringAttr("my-value"))))
+  ((_: bintry.Attr.AttrMap) ++ Map("my-package-attr" -> Seq(bintry.Attr.String("my-value"))))
 ```
 
 ```scala
 // append custom version attributes
 bintrayVersionAttributes ~=
-  ((_: bintray.AttrMap) ++ Map("my-version-attr" -> Seq(bintry.BooleanAttr(true))))
+  ((_: bintry.Attr.AttrMap) ++ Map("my-version-attr" -> Seq(bintry.Attr.Boolean(true))))
 ```
 
 _NOTE_ This interface will likely change in the future. All changes will be announced and well documented.
